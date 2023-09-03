@@ -1,0 +1,11 @@
+{
+  "name": "windows_cmd_web_protocol",
+  "version": "1.0.0",
+  "description": "A script that is used to call commands through a web browser with cmd://COMMAND HERE",
+  "main": "main.js",
+  "author": "ThePixelist11",
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  },
+  "license": "MIT"
+}
