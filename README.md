@@ -50,13 +50,9 @@ Install NodeJS if you do not already have it. It can be downloaded here: [NodeJS
 
 ### - Step 10:
 
-Open the command line or an integrated terminal if your editor/IDE has one. Navigate to your script with the code dowloaded from this repository. Use this command: `npm install bcrypt`. This will install BCrypt from npm. This is used to hash and compare the password.
-
-### - Step 11:
-
 In the Registry Editor, click on "command". Edit (default) by double clicking it. The value should be: "cmd.exe /k node c:\PATH\TO\CODE\main.js %1". Replace the path with the actual path to extracted code.
 
-### - Step 12:
+### - Step 11:
 
 Test it by going to: "cmd://echo testing123" in a web browser. There should be a popup. Click yes and the command line will open. If everything is worked properly, if you enter 'y' into the command line the command should run.
 
