@@ -84,10 +84,3 @@ function parseUrl(url) {
   let ret = decodeURIComponent(url.match(new RegExp('cmd://(.*)'))[1])
   return ret
 }
-function generatePassHash(password) {
-  bcrypt.hash(password, 10, (err, hash) => {
-    if (!err) {
-      return hash
-    }
-  })
-}
