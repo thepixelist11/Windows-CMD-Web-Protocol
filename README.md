@@ -6,9 +6,16 @@ Using this code and the steps below, you can run windows commands in a web brows
 
 ## Warning:
 
-To set this up, you will need to edit the Windows Registry. If you are not comfortable doing this, or do not have administrator access you can still run commands in the command line or PowerShell. This can introduce a securty vulnerability; websites can call these commands. There are several layers of customizable validation in place to minimize these risks. Do not worry if you make a typo when editing the registry. It will almost certainly have no negative effect on your computer. However, if you edit or delete registry keys or values that you did not create when following these steps you could cause damage to your computer.
+⚠️ Caution: Editing the Windows Registry
 
-## Setup
+Editing the Windows Registry can potentially cause catastrophic damage to your computer if not done correctly. Please follow these steps carefully. If you are not comfortable with these operations or do not have administrator access, consider seeking assistance.
+
+Security Implications: This setup allows websites to call commands on your computer, which introduces a security vulnerability. To minimize these risks, customizable validation layers have been implemented. While making a typo when editing the registry is unlikely to harm your computer, editing or deleting registry keys or values not created during these steps could lead to system instability.
+
+## Automated Setup
+Download the setup.bat file with this command: 
+
+## Manual Setup
 
 **Editing the Windows Registry can cause catastrophic damage to your computer if not done correctly. Please follow these steps carefully.**
 
@@ -58,7 +65,9 @@ Test it by going to: "cmd://echo testing123" in a web browser. There should be a
 
 ## Limitations:
 
-Not all commands can be run through this. As of now, the program can only be run as a standard user. Admin commands cannot be used. You _can_ run multiple commands at once. However, rather than using an ampersand (&) to separate commands, you need to use " and " with whitespace to either side. URLs have a special use for ampersands, so they cannot be used to call commands.
+**Command Restrictions:** Not all commands can be executed through this system. Currently, only non-administrative commands are supported, and administrative commands cannot be run.
+
+**Command Separation:** To run multiple commands in succession, use " and " with whitespace to either side instead of the ampersand (&). This is necessary due to URL limitations, as ampersands serve a special purpose in URLs.
 
 ## License:
 
