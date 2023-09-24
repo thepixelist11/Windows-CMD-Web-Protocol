@@ -6,10 +6,7 @@ const allArgs = process.argv
 const args = []
 
 // ------ OPTIONS
-const usePW = false
 const activateWithoutValidation = false // HIGHLY RECOMMENDED TO LEAVE FALSE
-const passwordHash = '$2b$10$Je6.v5kpiuSFOfbKbvc8buc/.bq.drV8XcwAMH5yrCA3mfbPrs0S6' // cmdpw1 by default. Can be changed by running the generate hash pass function with the new password in it. Put the new hash here.
-
 
 for (let i = 2; i < allArgs.length; i++) {
   args.push(allArgs[i])
@@ -27,32 +24,13 @@ exec('whoami /groups | find "S-1-5-32-544"', (error, stdout, stderr) => {
   }
 })
 // Validate and run command
-if (!usePW && !activateWithoutValidation) {
+if (!activateWithoutValidation) {
   input(
     `Are you sure you want to run '${command}' as a${admin ? 'n administrator' : ' standard user'} from directory ${__dirname}? (y/n - Default is n) `,
     ans => {
       if (ans.toLowerCase() === 'y') {
         callCmd(command)
       }
-    }
-  )
-} else if(!activateWithoutValidation) {
-  input(
-    `Are you sure you want to run '${command}' as a${
-      admin ? 'n administrator' : ' standard user'
-    } from directory ${__dirname}? (Enter password. You only have one chance.) `,
-    ans => {
-      bcrypt.compare(ans, passwordHash, (err, result) => {
-        if (err) {
-          console.error('Error comparing passwords:', err)
-        } else {
-          if (result === true) {
-            callCmd(command)
-          } else {
-            console.log('Password is invalid')
-          }
-        }
-      })
     }
   )
 } else {
@@ -83,11 +61,4 @@ function parseUrl(url) {
   }
   let ret = decodeURIComponent(url.match(new RegExp('cmd://(.*)'))[1])
   return ret
-}
-function generatePassHash(password) {
-  bcrypt.hash(password, 10, (err, hash) => {
-    if (!err) {
-      return hash
-    }
-  })
 }

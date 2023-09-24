@@ -56,10 +56,6 @@ In the Registry Editor, click on "command". Edit (default) by double clicking it
 
 Test it by going to: "cmd://echo testing123" in a web browser. There should be a popup. Click yes and the command line will open. If everything is worked properly, if you enter 'y' into the command line the command should run.
 
-## Change validation:
-
-By default, this will not require a password but will require you to enter 'y' before a command runs. This can be changed in main.js. In the options section at the top marked by a comment, you can change a few options. You can enable a password by changing usePW to true. The password is "cmdpw1" by default. You can also change the password by generating a hash for it with the `generatePashHash(password)` function and replacing the current hash with the hash generated. The last option you can change is activateWithoutValidation. This will remove all validation after the command line opens, and will run commands right away. It is highly recommended to leave this off as it can be a security vulnerability by allowing any website to run commands on your computer.
-
 ## Limitations:
 
 Not all commands can be run through this. As of now, the program can only be run as a standard user. Admin commands cannot be used. You _can_ run multiple commands at once. However, rather than using an ampersand (&) to separate commands, you need to use " and " with whitespace to either side. URLs have a special use for ampersands, so they cannot be used to call commands.
@@ -68,7 +64,7 @@ Not all commands can be run through this. As of now, the program can only be run
 
 MIT License
 
-Copyright 2023 ThePixelist11
+Copyright 2023 thepixelist11
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
