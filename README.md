@@ -12,14 +12,7 @@ Editing the Windows Registry can potentially cause catastrophic damage to your c
 
 Security Implications: This setup allows websites to call commands on your computer, which introduces a security vulnerability. To minimize these risks, customizable validation layers have been implemented. While making a typo when editing the registry is unlikely to harm your computer, editing or deleting registry keys or values not created during these steps could lead to system instability.
 
-## Automated Setup (Recommended)
-Download the setup.bat file with this command in powershell: (git clone --depth 1 --filter=blob:none https://github.com/thepixelist11/Windows-CMD-Web-Protocol) ; (move .\Windows-CMD-Web-Protocol\setup.bat .\setup.bat) ; (rm -r -force .\Windows-CMD-Web-Protocol)
-
-**The above command will _only_ work in PowerShell**
-
-Next, run setup.bat as administrator. This will set everything up automatically!
-
-## Manual Setup
+## Setup
 
 **Editing the Windows Registry can cause catastrophic damage to your computer if not done correctly. Please follow these steps carefully.**
 
