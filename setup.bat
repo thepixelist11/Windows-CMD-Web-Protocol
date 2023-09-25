@@ -7,7 +7,7 @@ mkdir %ProgramFiles%\CMDWebProtocol
 cd %ProgramFiles%\CMDWebProtocol
 git clone --depth 1 --filter=blob:none https://github.com/thepixelist11/Windows-CMD-Web-Protocol
 move .\Windows-CMD-Web-Protocol\main.js .\main.js
-rm -r -force .\Windows-CMD-Web-Protocol
+del -r -force .\Windows-CMD-Web-Protocol
 rem Edit registry
 reg add "HKEY_CLASSES_ROOT\cmd" /f
 reg add "HKEY_CLASSES_ROOT\cmd\shell" /f
