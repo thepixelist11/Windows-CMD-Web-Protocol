@@ -1,3 +1,4 @@
+rem THIS DOES NOT YET WORK. DO NOT USE THIS. FOLLOW THE MANUAL SETUP IN THE README.md FILE
 @echo off
 rem Install Node.js and NPM
 msiexec /i "%~dp0node-v18.16.0-x64.msi" /qn
