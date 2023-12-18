@@ -1,5 +1,7 @@
 # Windows CMD Web Protocol
 
+# Do NOT use the setup.bat file. It is incomplete at the moment.
+
 ## Description:
 
 Using this code and the steps below, you can run windows commands in a web browser! Once this is set up, you will be able to run most non-admin commands through any web browser like Chrome, Firefox, or Edge. To run a command, you can use cmd://COMMAND HERE in a web browser. You can even run multiple commands in succession by separating the commands with " and ".
